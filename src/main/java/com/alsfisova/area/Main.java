@@ -4,10 +4,10 @@ public class Main {
     public static void main(String[] args) {
         Triangle triangle = new Triangle(2, 4, 5);
         Square square = new Square(4);
-        Circle circle = new Circle(2.0);
+        Circle circle = new Circle(2);
 
-        triangle.setA(5);
-        triangle.setB(6);
+        triangle.setA(5.5);
+        triangle.setB(6.7);
         triangle.setC(7);
         triangle.Area();
         triangle.Print();

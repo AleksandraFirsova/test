@@ -1,13 +1,13 @@
 package com.alsfisova.area;
 
 public class Square extends Figures {
-    private int a;
+    private double a;
 
-    public Square(int a) {
+    public Square(double a) {
         this.a = a;
     }
 
-    public void setA(int a) {
+    public void setA(double a) {
         this.a = a;
         System.out.println("Вы поменяли длину стороны квадрата на " + a);
     }

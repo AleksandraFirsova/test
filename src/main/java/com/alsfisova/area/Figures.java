@@ -1,7 +1,7 @@
 package com.alsfisova.area;
 
 public class Figures {
-    public double result;
+    double result;
 
     public double Area() {
         return 0;
