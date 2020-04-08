@@ -2,15 +2,19 @@ package com.alsfisova.area;
 
 public class Circle extends Figures {
     private double r;
-    final double p = Math.PI;
 
     public Circle(double r) {
         this.r = r;
     }
 
+    public void setR(double r) {
+        this.r = r;
+        System.out.println("Вы поменяли радиус круга на " + r);
+    }
+
     @Override
     public double Area() {
-        result = p * r * r;
+        result = Math.round(Math.PI * Math.pow(r, 2));
         return result;
     }
 

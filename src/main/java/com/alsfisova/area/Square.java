@@ -7,6 +7,11 @@ public class Square extends Figures {
         this.a = a;
     }
 
+    public void setA(int a) {
+        this.a = a;
+        System.out.println("Вы поменяли длину стороны квадрата на " + a);
+    }
+
     @Override
     public double Area() {
         result = a * a;
