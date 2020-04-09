@@ -10,16 +10,13 @@ public class Main {
         triangle.setB(6.7);
         triangle.setC(7);
         triangle.Area();
-        triangle.Print();
         System.out.println(" ");
 
         square.setA(8);
         square.Area();
-        square.Print();
         System.out.println(" ");
 
         circle.setR(4);
         circle.Area();
-        circle.Print();
     }
 }

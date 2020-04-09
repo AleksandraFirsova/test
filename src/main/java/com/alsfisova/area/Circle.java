@@ -13,13 +13,8 @@ public class Circle extends Figures {
     }
 
     @Override
-    public double Area() {
+    public void Area() {
         result = Math.round(Math.PI * Math.pow(r, 2));
-        return result;
-    }
-
-    @Override
-    public void Print() {
         System.out.println("Площадь круга: " + result);
     }
 }

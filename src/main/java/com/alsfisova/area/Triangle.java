@@ -27,13 +27,9 @@ public class Triangle extends Figures {
     }
 
     @Override
-    public double Area() {
+    public void Area() {
         result = Math.sqrt(a * a + b * b + c * c);
-        return result;
-    }
-
-    @Override
-    public void Print() {
         System.out.println("Площадь треугольника: " + result);
     }
+
 }
