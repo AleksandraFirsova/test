@@ -13,7 +13,7 @@ public class Square extends Figures {
     }
 
     @Override
-    public void Area() {
+    public void area() {
         result = a * a;
         System.out.println("Площадь квадрата: " + result);
     }

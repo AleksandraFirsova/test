@@ -27,7 +27,7 @@ public class Triangle extends Figures {
     }
 
     @Override
-    public void Area() {
+    public void area() {
         result = Math.sqrt(a * a + b * b + c * c);
         System.out.println("Площадь треугольника: " + result);
     }

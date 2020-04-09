@@ -9,14 +9,14 @@ public class Main {
         triangle.setA(5.5);
         triangle.setB(6.7);
         triangle.setC(7);
-        triangle.Area();
+        triangle.area();
         System.out.println(" ");
 
         square.setA(8);
-        square.Area();
+        square.area();
         System.out.println(" ");
 
         circle.setR(4);
-        circle.Area();
+        circle.area();
     }
 }

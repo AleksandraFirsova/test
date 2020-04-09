@@ -1,20 +1,20 @@
 package com.alsfisova.area;
 
 public class Circle extends Figures {
-    private double r;
+    private double radius;
 
-    public Circle(double r) {
-        this.r = r;
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
-    public void setR(double r) {
-        this.r = r;
-        System.out.println("Вы поменяли радиус круга на " + r);
+    public void setR(double radius) {
+        this.radius = radius;
+        System.out.println("Вы поменяли радиус круга на " + radius);
     }
 
     @Override
-    public void Area() {
-        result = Math.round(Math.PI * Math.pow(r, 2));
+    public void area() {
+        result = Math.round(Math.PI * Math.pow(radius, 2));
         System.out.println("Площадь круга: " + result);
     }
 }
