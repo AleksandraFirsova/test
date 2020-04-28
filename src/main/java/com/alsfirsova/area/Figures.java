@@ -1,4 +1,4 @@
-package com.alsfisova.area;
+package com.alsfirsova.area;
 
 public class Figures {
     double result;

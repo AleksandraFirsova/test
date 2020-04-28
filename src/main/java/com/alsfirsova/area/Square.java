@@ -1,4 +1,4 @@
-package com.alsfisova.area;
+package com.alsfirsova.area;
 
 public class Square extends Figures {
     private double a;
