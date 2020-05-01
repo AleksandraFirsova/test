@@ -7,8 +7,7 @@ public class Plane extends Vehicle {
     }
 
     @Override
-    public void move() {
-        System.out.println("fly");
-
+    public void amountPassengers() {
+        System.out.println(name + " вмещает в себя 500 человек");
     }
 }
