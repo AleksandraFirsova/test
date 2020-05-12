@@ -4,8 +4,10 @@ public class Main {
     public static void main(String[] args) {
         ITransport t = getTransport(args[0]);
         t.move();
+        ICarFirst.iMove();
         if (t instanceof Car) {
             ((Car) t).brake();
+
         }
 
     }

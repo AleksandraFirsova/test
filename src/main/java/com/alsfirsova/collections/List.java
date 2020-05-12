@@ -1,4 +1,4 @@
-package com.alsfirsova.list;
+package com.alsfirsova.collections;
 
 import java.util.ArrayList;
 
