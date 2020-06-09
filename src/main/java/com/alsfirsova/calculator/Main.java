@@ -1,5 +1,9 @@
 package com.alsfirsova.calculator;
 
+import com.alsfirsova.exceptions.DivisionException;
+import com.alsfirsova.exceptions.MoreThan100Exception;
+
+import java.sql.SQLException;
 import java.util.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -21,16 +25,16 @@ public class Main {
         return number;
     }
 
+
     public static Operation getOperationFromConsole() {
         System.out.println("Введите операцию (+, -, *, /): ");
-         Operation operationInput;
+        Operation operationInput = null;
         if (scan.hasNext()) {
             operationInput = Operation.getByOperationSymbol(scan.next().charAt(0));
-
-        } else {
-            System.out.println("Вы ввели некорректную операцию");
-            scan.next();
-            operationInput = getOperationFromConsole();
+            if (operationInput == null) {
+                System.out.println("Вы ввели некорректную операцию");
+                operationInput = getOperationFromConsole();
+            }
         }
         return operationInput;
     }
@@ -43,17 +47,58 @@ public class Main {
         System.out.println("Результат предыдущей операции: " + calcMap.get(operation));
     }
 
-    public static void main(String[] args) {
+    public static class Connection implements AutoCloseable{
+        public void connect() {
 
-        for (int i = 1; i <= 50; i++) {
+        }
+
+        public void disconnect() {
+
+        }
+
+        public void doSomething() throws SQLException {
+
+        }
+
+        @Override
+        public void close() throws Exception {
+            disconnect();
+        }
+    }
+
+    public static int example() {
+        try(Connection connection = new Connection()) {
+            connection.connect();
+            connection.doSomething();
+            return 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 1;
+        }
+    }
+
+    public static void main(String[] args) {
+        boolean isExceptionPresent;
+
+
+        do {
             int num1 = getNumber();
             int num2 = getNumber();
             Operation operationInput = getOperationFromConsole();
 
-            int result = operationInput.handler.doOperation(num1, num2);
-            Main.checkAndPrint(operationInput);
+            int result = 0;
+
+            try {
+                result = operationInput.handler.doOperation(num1, num2);
+                isExceptionPresent = false;
+                Main.checkAndPrint(operationInput);
                 calcMap.put(operationInput, result);
                 System.out.println("Результат операции " + operationInput.localName + " : " + result);
-        }
+
+            } catch (Exception e) {
+                isExceptionPresent = true;
+                System.out.println(e.getMessage());
+            }
+        } while (isExceptionPresent);
     }
 }
